@@ -1,6 +1,4 @@
-$primary:white;
-$secondary:#005a9c;
-$btn:red;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100&display=swap');
 
 *{
     margin: 0;
@@ -8,3 +6,10 @@ $btn:red;
     user-select: none;
     text-decoration: none;
 }
+
+body{
+    background-color: rgba(211, 205, 205, 0.596);
+}
+$primary:white;
+$secondary:#005a9c;
+$btn:red;

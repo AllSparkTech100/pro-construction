@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,10 @@
       -ms-user-select: none;
           user-select: none;
   text-decoration: none;
+}
+
+body {
+  background-color: rgba(211, 205, 205, 0.596);
 }
 
 .btn {
@@ -25,6 +30,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,8 +40,8 @@ header {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 3rem;
-  width: 100vw;
-  background-color: #ffee22;
+  width: 100%;
+  background-color: white;
 }
 
 header .logo h1 {
@@ -93,8 +99,10 @@ header nav ul li a {
   width: 50%;
 }
 
-.intro .inner h2, .intro .inner h4 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.intro .inner h2,
+.intro .inner h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 3;
   margin: 3px;
   font-weight: bold;
   color: white;
@@ -106,6 +114,160 @@ header nav ul li a {
 
 .intro .inner h4 {
   font-size: 18px;
+}
+
+.second {
+  width: 100%;
+  height: 70vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  margin-top: 8rem;
+}
+
+.second .second-carrier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px;
+  text-align: left;
+}
+
+.second .second-carrier h4,
+.second .second-carrier h2 {
+  font-family: 'Poppins';
+}
+
+.second .second-carrier h2 {
+  margin-top: 10px;
+}
+
+.second .second-carrier h4 {
+  color: red;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.second .second-carrier .parag {
+  height: 78%;
+  margin-top: 20px;
+  width: 80%;
+  font-family: 'Poppins';
+}
+
+.second .second-carrier .parag .first {
+  width: 98%;
+  margin-top: 10px;
+  padding: 3px;
+}
+
+.second img {
+  border-radius: 40px;
+  height: 75vh;
+  width: 50%;
+  margin-right: 50px;
+}
+
+.services {
+  width: 100%;
+  height: 80vh;
+  margin-top: 20rem;
+  text-align: center;
+  font-family: 'Poppins';
+}
+
+.services h2 {
+  font-size: 18px;
+}
+
+.services .servCtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 60%;
+  margin-top: 4rem;
+  width: 90%;
+  margin: 60px 60px;
+}
+
+.services .servCtn .box {
+  background-color: white;
+  height: 40vh;
+  width: 16vw;
+  color: black;
+}
+
+.services .servCtn .box p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.services .servCtn .box img {
+  height: 30vh;
+  width: 16vw;
+}
+
+.services .servCtn .box:hover {
+  cursor: pointer;
+  height: 50vh;
+}
+
+.services .servCtn .box:hover img {
+  height: 40vh;
+}
+
+.services .servCtn .box:hover p {
+  font-size: 18px;
+}
+
+.services .servBtn {
+  font-size: 14px;
+  font-family: 'Poppins';
+  color: white;
+  border-radius: 4px;
+  padding: 10px 25px;
+}
+
+.contact {
+  height: 50vh;
+  width: 100%;
+  margin-top: 9rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 54, 45, 0.644)), to(rgba(5, 2, 0, 0.863))), url(../images/room.jpg);
+  background-image: linear-gradient(rgba(72, 54, 45, 0.644), rgba(5, 2, 0, 0.863)), url(../images/room.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.contact .content {
+  position: relative;
+  top: 35%;
+  font-family: 'Poppins';
+  font-size: 18px;
+  color: white;
+}
+
+.contact .content p {
+  margin-top: 20px;
+}
+
+footer {
+  height: 80vh;
+  width: 100%;
+  background-color: rgba(0, 0, 34, 0.151);
+  margin-top: 15rem;
 }
 
 @media screen and (max-width: 320px) {
