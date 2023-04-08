@@ -45,7 +45,8 @@ header {
 }
 
 header .logo h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins';
+  font-weight: bold;
   font-size: 18px;
 }
 
@@ -73,7 +74,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Poppins';
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -288,7 +289,101 @@ header nav ul li a {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
+  header nav {
+    display: none;
+  }
+  .intro {
+    height: 45vh;
+  }
+  .intro .inner {
+    height: 20px;
+    padding: 0;
+    border: 0;
+    width: 80%;
+    left: 10%;
+  }
+  .intro .inner h2 {
+    font-size: 12px;
+  }
+  .second {
+    padding: 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .second img {
+    display: none;
+  }
+  .second .second-carrier {
+    text-align: center;
+  }
+  .second .second-carrier h4 {
+    font-size: 12px;
+  }
+  .second .second-carrier h2 {
+    font-size: 15px;
+  }
+  .second .second-carrier .parag {
+    width: 100%;
+    text-align: justify;
+  }
+  .second .second-carrier .parag .first {
+    margin: 0;
+    font-size: 12px;
+  }
+  .services {
+    position: relative;
+    top: -4px;
+    height: 110vh;
+  }
+  .services h2 {
+    -webkit-text-decoration: underline 2px solid #005a9c;
+            text-decoration: underline 2px solid #005a9c;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .services p {
+    margin-top: -12px;
+    font-size: 14px;
+    padding: 12px;
+  }
+  .services .servCtn {
+    margin: 0 0 0 15px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .services .servCtn .box {
+    margin: 15px 0 0 0;
+    width: 40vw;
+    height: 40vh;
+  }
+  .services .servCtn .box p {
+    font-size: 12px;
+  }
+  .services .servCtn .box img {
+    width: 100%;
+  }
+  .services .servBtn {
+    margin-top: 40%;
+    font-size: 10px;
+  }
+  .contact {
+    margin-top: 50%;
+  }
+  .contact .content {
+    text-align: center;
+  }
+  .contact .content h3 {
+    font-size: 14px;
+  }
+  .contact .content p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
   header nav ul {
     display: inline-block;
     text-align: center;
@@ -366,96 +461,6 @@ header nav ul li a {
   }
   .contact {
     margin-top: 80px;
-  }
-  .contact .content {
-    text-align: center;
-  }
-  .contact .content h3 {
-    font-size: 14px;
-  }
-  .contact .content p {
-    font-size: 13px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header nav ul {
-    display: inline-block;
-    text-align: center;
-  }
-  .intro .inner {
-    height: 20px;
-    padding: 0;
-    border: 0;
-    width: 80%;
-    left: 10%;
-  }
-  .intro .inner h2 {
-    font-size: 12px;
-  }
-  .second {
-    padding: 0;
-    margin-top: 40px;
-    text-align: center;
-  }
-  .second img {
-    display: none;
-  }
-  .second .second-carrier {
-    text-align: center;
-  }
-  .second .second-carrier h4 {
-    font-size: 12px;
-  }
-  .second .second-carrier h2 {
-    font-size: 15px;
-  }
-  .second .second-carrier .parag {
-    width: 100%;
-    text-align: justify;
-  }
-  .second .second-carrier .parag .first {
-    margin: 0;
-    font-size: 12px;
-  }
-  .services {
-    margin-top: 100px;
-    height: 110vh;
-  }
-  .services h2 {
-    -webkit-text-decoration: underline 2px solid #005a9c;
-            text-decoration: underline 2px solid #005a9c;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
-  .services p {
-    font-size: 12px;
-    padding: 12px;
-  }
-  .services .servCtn {
-    margin: 0 0 0 15px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .services .servCtn .box {
-    margin: 15px 0 0 0;
-    width: 40vw;
-    height: 40vh;
-  }
-  .services .servCtn .box p {
-    font-size: 12px;
-  }
-  .services .servCtn .box img {
-    width: 100%;
-  }
-  .services .servBtn {
-    margin-top: 30%;
-    font-size: 10px;
-  }
-  .contact {
-    margin-top: 100px;
   }
   .contact .content {
     text-align: center;

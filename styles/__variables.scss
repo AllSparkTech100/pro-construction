@@ -13,3 +13,64 @@ body{
 $primary:white;
 $secondary:#005a9c;
 $btn:red;
+
+
+// .wrapper{
+//     width: 100%;
+//     position: fixed;
+//     height: 3rem;
+  
+//    .wrapper-inner{
+//         z-index: 999;
+//         height: 25px;
+//         width: 60px;
+//         margin-top:10px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//         align-items: center;
+//         float:right;
+//         cursor: pointer;
+  
+//         .menulogo{
+//             height:7px;
+//             width: 40px;
+//             background-color: $secondary;
+//             border-radius: 20px;
+//         }
+//     }
+//   }
+  
+//   .menu{
+//     position: fixed;
+//     z-index: 999;
+//     font-family: 'Poppins';
+//     background-color: $primary;
+//     width: 40%;
+//     height: 100vh;
+//     padding: 50px;
+//     transform: translateX(-900px);
+//     transition: 0.5s;
+  
+  
+//     li{
+//         list-style: none;
+//         border-bottom: 1px solid rgb(130,117,218);
+//         padding: 20px 0;
+//         text-align: center;
+  
+//        &:last-child{
+//             border-bottom: none;
+//         }
+//         a{
+//             transition: font-weight 0.2s ;
+//             // color: $all;
+//             text-decoration: none;
+//             font-size: 10px;
+//         }
+//     }
+//   }
+  
+//   .showmenu{
+//     transform: translateX(0px);
+//   }

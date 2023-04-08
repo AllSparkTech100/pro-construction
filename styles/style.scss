@@ -15,7 +15,8 @@ header {
 
     .logo {
         h1 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins';
+            font-weight: bold;
             font-size: 18px;
         }
     }
@@ -35,7 +36,7 @@ header {
                 list-style: none;
 
                 a {
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-family: 'Poppins';
                     font-size: 14px;
                     text-transform: uppercase;
                 }
@@ -232,7 +233,112 @@ header {
 
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
+
+    header{
+        nav{
+            display: none;
+        }
+    }
+    .intro{
+        height: 45vh;
+        .inner{
+            height: 20px;
+            padding: 0;
+            border: 0;
+            width: 80%;
+            left:10%;
+
+            h2{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .second{
+        padding: 0;
+        margin-top: 40px;
+        text-align: center;
+
+        img{
+            display:none;
+        }
+
+        .second-carrier{
+            text-align: center;
+            h4{
+                font-size: 12px;
+            }
+            h2{
+                font-size: 15px;
+            }
+
+            .parag{
+                width: 100%;
+                text-align: justify;
+                .first{
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .services{
+
+        position: relative;
+        top: -4px;
+        height: 110vh;
+        h2{
+            text-decoration: underline 2px solid $secondary;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        p{
+            margin-top: -12px;
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        .servCtn{
+            margin: 0 0 0 15px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .box{
+                margin: 15px 0 0 0;               
+                width:40vw;
+                height: 40vh;
+                p{
+                    font-size: 12px;
+                }
+                img{
+                    width:100%;
+                }
+            }
+        }
+
+        .servBtn{
+            margin-top: 40%;
+            font-size: 10px;
+        }
+    }
+
+    .contact{
+
+        margin-top:50%;
+        .content{
+            text-align: center;
+            h3{
+                font-size: 14px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
     header {
         nav {
             ul {
@@ -333,213 +439,5 @@ header {
             }
         }
     }
-}
-
-
-@media screen and (max-width:480px) {
-    header {
-        nav {
-            ul {
-                display: inline-block;
-                text-align: center;
-            }
-        }
-    }
-
-    .intro{
-        .inner{
-            height: 20px;
-            padding: 0;
-            border: 0;
-            width: 80%;
-            left:10%;
-
-            h2{
-                font-size: 12px;
-            }
-        }
-    }
-
-    .second{
-        padding: 0;
-        margin-top: 40px;
-        text-align: center;
-
-        img{
-            display:none;
-        }
-
-        .second-carrier{
-            text-align: center;
-            h4{
-                font-size: 12px;
-            }
-            h2{
-                font-size: 15px;
-            }
-
-            .parag{
-                width: 100%;
-                text-align: justify;
-                .first{
-                    margin: 0;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
-    .services{
-        margin-top: 100px;
-        height: 110vh;
-        h2{
-            text-decoration: underline 2px solid $secondary;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-        p{
-            font-size: 12px;
-            padding: 12px;
-        }
-
-        .servCtn{
-            margin: 0 0 0 15px;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            .box{
-                margin: 15px 0 0 0;               
-                width:40vw;
-                height: 40vh;
-                p{
-                    font-size: 12px;
-                }
-                img{
-                    width:100%;
-                }
-            }
-        }
-
-        .servBtn{
-            margin-top: 30%;
-            font-size: 10px;
-        }
-    }
-
-    .contact{
-        margin-top:100px;
-        .content{
-            text-align: center;
-            h3{
-                font-size: 14px;
-            }
-            p{
-                font-size: 13px;
-            }
-        }
-    }
     
 }
-
-// @media screen and (min-width:481px) and (max-width:720px) {
-//     header {
-//         nav {
-//             ul {
-//                 display: inline-block;
-//                 text-align: center;
-//             }
-//         }
-//     }
-
-//     .intro{
-//         .inner{
-//             height: 20px;
-//             padding: 0;
-//             border: 0;
-//             width: 80%;
-//             left:10%;
-
-//             h2{
-//                 font-size: 12px;
-//             }
-//         }
-//     }
-
-//     .second{
-//         padding: 0;
-//         margin-top: 40px;
-//         text-align: center;
-
-//         img{
-//             display:none;
-//         }
-
-//         .second-carrier{
-//             text-align: center;
-//             h4{
-//                 font-size: 12px;
-//             }
-//             h2{
-//                 font-size: 15px;
-//             }
-
-//             .parag{
-//                 width: 100%;
-//                 text-align: justify;
-//                 .first{
-//                     margin: 0;
-//                     font-size: 12px;
-//                 }
-//             }
-//         }
-//     }
-
-//     .services{
-//         margin-top: 250px;
-//         height: 110vh;
-//         h2{
-//             text-decoration: underline 2px solid $secondary;
-//             text-transform: uppercase;
-//             font-size: 12px;
-//         }
-//         p{
-//             font-size: 12px;
-//             padding: 12px;
-//         }
-
-//         .servCtn{
-//             margin: 0 0 0 15px;
-//             justify-content: space-around;
-//             flex-wrap: wrap;
-//             .box{
-//                 margin: 15px 0 0 0;               
-//                 width:40vw;
-//                 height: 40vh;
-//                 p{
-//                     font-size: 12px;
-//                 }
-//                 img{
-//                     width:100%;
-//                 }
-//             }
-//         }
-
-//         .servBtn{
-//             margin-top: 39%;
-//             font-size: 9px;
-//         }
-//     }
-
-//     .contact{
-//         margin-top:80px;
-//         .content{
-//             text-align: center;
-//             h3{
-//                 font-size: 14px;
-//             }
-//             p{
-//                 font-size: 13px;
-//             }
-//         }
-//     }
-    
-// }
