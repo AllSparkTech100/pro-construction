@@ -1,16 +1,6 @@
 @import "./_variables";
 @import "./_helper";
 
-.circle{
-    background-color: $secondary;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    float: right;
-    position: fixed;
-    z-index: 999;
-    display: block;
-}
 
 header {
     position: sticky;
@@ -62,26 +52,38 @@ header {
     background-position: right;
     background-size: cover;
 
+    @keyframes zoom-in-zoom-out{
+        0%{
+            transform: scale(1, 1);
+        }
+
+        50%{
+            transform: scale(1.5, 1.5);
+        }
+
+        100%{
+            transform: scale(1 ,1);
+        }
+    }
     .inner {
-        border: 4px solid $primary;
-        padding: 40px;
         position: relative;
-        top: 35%;
-        left: 20%;
+        top: 40%;
+        left: 25%;
         text-align: center;
         height: 4rem;
         width: 50%;
 
         h2,
         h4 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            font-family: 'Poppins';
             letter-spacing: 3;
             margin: 3px;
-            font-weight: bold;
+            font-weight: normal;
             color: $primary;
         }
 
-        h2 {
+        h2 {animation: zoom-in-zoom-out 6s ease infinite;
             font-size: 24px;
         }
 
@@ -147,7 +149,7 @@ header {
 
 .services {
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     margin-top: 20rem;
     text-align: center;
     font-family: 'Poppins';
@@ -230,29 +232,6 @@ header {
 
 }
 
-
-footer{
-    height: 80vh;
-    width: 100%;
-    background-color: rgba(0, 0, 34, 0.151);
-    margin-top: 15rem;
-
-    table{
-        border: 2px solid $primary;
-        border-collapse: collapse;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width:320px) {
     header {
         nav {
@@ -265,10 +244,15 @@ footer{
 
     .intro{
         .inner{
+            height: 20px;
             padding: 0;
             border: 0;
             width: 80%;
             left:10%;
+
+            h2{
+                font-size: 12px;
+            }
         }
     }
 
@@ -350,3 +334,212 @@ footer{
         }
     }
 }
+
+
+@media screen and (max-width:480px) {
+    header {
+        nav {
+            ul {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+    }
+
+    .intro{
+        .inner{
+            height: 20px;
+            padding: 0;
+            border: 0;
+            width: 80%;
+            left:10%;
+
+            h2{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .second{
+        padding: 0;
+        margin-top: 40px;
+        text-align: center;
+
+        img{
+            display:none;
+        }
+
+        .second-carrier{
+            text-align: center;
+            h4{
+                font-size: 12px;
+            }
+            h2{
+                font-size: 15px;
+            }
+
+            .parag{
+                width: 100%;
+                text-align: justify;
+                .first{
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .services{
+        margin-top: 100px;
+        height: 110vh;
+        h2{
+            text-decoration: underline 2px solid $secondary;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        p{
+            font-size: 12px;
+            padding: 12px;
+        }
+
+        .servCtn{
+            margin: 0 0 0 15px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .box{
+                margin: 15px 0 0 0;               
+                width:40vw;
+                height: 40vh;
+                p{
+                    font-size: 12px;
+                }
+                img{
+                    width:100%;
+                }
+            }
+        }
+
+        .servBtn{
+            margin-top: 30%;
+            font-size: 10px;
+        }
+    }
+
+    .contact{
+        margin-top:100px;
+        .content{
+            text-align: center;
+            h3{
+                font-size: 14px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+    
+}
+
+// @media screen and (min-width:481px) and (max-width:720px) {
+//     header {
+//         nav {
+//             ul {
+//                 display: inline-block;
+//                 text-align: center;
+//             }
+//         }
+//     }
+
+//     .intro{
+//         .inner{
+//             height: 20px;
+//             padding: 0;
+//             border: 0;
+//             width: 80%;
+//             left:10%;
+
+//             h2{
+//                 font-size: 12px;
+//             }
+//         }
+//     }
+
+//     .second{
+//         padding: 0;
+//         margin-top: 40px;
+//         text-align: center;
+
+//         img{
+//             display:none;
+//         }
+
+//         .second-carrier{
+//             text-align: center;
+//             h4{
+//                 font-size: 12px;
+//             }
+//             h2{
+//                 font-size: 15px;
+//             }
+
+//             .parag{
+//                 width: 100%;
+//                 text-align: justify;
+//                 .first{
+//                     margin: 0;
+//                     font-size: 12px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .services{
+//         margin-top: 250px;
+//         height: 110vh;
+//         h2{
+//             text-decoration: underline 2px solid $secondary;
+//             text-transform: uppercase;
+//             font-size: 12px;
+//         }
+//         p{
+//             font-size: 12px;
+//             padding: 12px;
+//         }
+
+//         .servCtn{
+//             margin: 0 0 0 15px;
+//             justify-content: space-around;
+//             flex-wrap: wrap;
+//             .box{
+//                 margin: 15px 0 0 0;               
+//                 width:40vw;
+//                 height: 40vh;
+//                 p{
+//                     font-size: 12px;
+//                 }
+//                 img{
+//                     width:100%;
+//                 }
+//             }
+//         }
+
+//         .servBtn{
+//             margin-top: 39%;
+//             font-size: 9px;
+//         }
+//     }
+
+//     .contact{
+//         margin-top:80px;
+//         .content{
+//             text-align: center;
+//             h3{
+//                 font-size: 14px;
+//             }
+//             p{
+//                 font-size: 13px;
+//             }
+//         }
+//     }
+    
+// }
