@@ -7,8 +7,6 @@
       -ms-user-select: none;
           user-select: none;
   text-decoration: none;
-  -webkit-transition: all ease-in-out 2s;
-  transition: all ease-in-out 2s;
 }
 
 body {
@@ -73,6 +71,7 @@ body {
   padding: 5px 12px;
   background-color: red;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -111,6 +110,8 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 3rem;
   width: 100%;
   background-color: white;
@@ -154,6 +155,26 @@ header nav ul li a {
   font-family: 'Poppins';
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.socials {
+  width: 10%;
+}
+
+.socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.socials ul li {
+  list-style: none;
 }
 
 @-webkit-keyframes zoom-in-zoom-out {
@@ -413,7 +434,7 @@ header nav ul li a {
     padding: 12px;
   }
   .services .servCtn {
-    margin: 10px 0 0 22px;
+    margin: 10px 0 0 26px;
   }
   .services .servCtn .imageSlider {
     margin: 0;
@@ -459,7 +480,7 @@ header nav ul li a {
     display: none;
   }
   .intro {
-    height: 45vh;
+    height: 50vh;
   }
   .intro .inner {
     height: 20px;
@@ -644,7 +665,7 @@ header nav ul li a {
     font-size: 14px;
   }
   .services {
-    margin-top: 10rem;
+    margin-top: 20rem;
   }
   .services .servCtn {
     margin: 15px 0 0 15px;
@@ -657,6 +678,10 @@ header nav ul li a {
   }
   .services .servCtn .imageSlider .slides {
     height: 70%;
+  }
+  .services .servBtn {
+    position: relative;
+    left: 10px;
   }
   .contact {
     margin-top: 4rem;
@@ -717,7 +742,13 @@ header nav ul li a {
 
 @media screen and (max-width: 247px) {
   .services {
-    margin-top: 19rem;
+    margin-top: 28rem;
+  }
+  .contact .content h3 {
+    font-size: 14px;
+  }
+  .contact .content p {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

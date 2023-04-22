@@ -11,6 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     height: 3rem;
     width: 100%;
     background-color: $primary;
@@ -49,6 +50,18 @@ header {
     }
 }
 
+.socials{
+        // background: #000;
+        width: 10%;
+        ul{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            li{
+                list-style: none;
+            }
+        }
+    }
 @keyframes zoom-in-zoom-out {
     0% {
         transform: scale(1, 1);
@@ -223,7 +236,7 @@ header {
 @media screen and (max-width:480px) and (orientation:portrait) {
     header {
         nav {
-            display: none;
+       display: none;
         }
     }
 
@@ -296,7 +309,7 @@ header {
         }
 
         .servCtn {
-            margin: 10px 0 0 22px;
+            margin: 10px 0 0 26px;
 
             .imageSlider {
                 margin: 0;
@@ -357,7 +370,7 @@ header {
     }
 
     .intro {
-        height: 45vh;
+        height: 50vh;
 
         .inner {
             height: 20px;
@@ -605,7 +618,7 @@ header {
     }
 
     .services {
-        margin-top: 10rem;
+        margin-top: 20rem;
 
         .servCtn {
             margin: 15px 0 0 15px;
@@ -621,6 +634,11 @@ header {
                     height: 70%;
                 }
             }
+        }
+
+        .servBtn{
+            position: relative;
+            left: 10px;
         }
     }
 
@@ -703,6 +721,18 @@ header {
 
 @media screen and (max-width:247px) {
     .services {
-        margin-top: 19rem;
+        margin-top: 28rem;
+    }
+
+    .contact{
+        .content{
+            h3{
+                font-size: 14px;
+            }
+
+            p{
+                font-size: 10px;
+            }
+        }
     }
 }
