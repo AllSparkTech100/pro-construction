@@ -91,6 +91,14 @@ footer p {
   font-size: 16px;
 }
 
+footer p li {
+  list-style: none;
+}
+
+footer p li .fa-brands {
+  color: white;
+}
+
 .btn {
   padding: 5px 12px;
   background-color: red;
