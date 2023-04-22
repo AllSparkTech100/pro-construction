@@ -360,11 +360,6 @@ header {
 }
 
 @media screen and (max-width:480px) and (orientation:landscape) {
-    header {
-        nav {
-            display: none;
-        }
-    }
 
     .intro {
         height: 50vh;
@@ -491,17 +486,22 @@ header {
 
 @media screen and (min-width:481px) and (max-width:767px) {
     header {
-
+        padding: 15px 10px;
         nav {
-            display: none;
-
-            ul {
+            ul{
+                text-align: right;
                 display: inline-block;
-                text-align: center;
+                position: relative;
+                left: 65%;
+                bottom: 20px;
+                li{
+                    a{
+                        font-size: 13px;
+                    }
+                }
             }
         }
     }
-
     .intro {
         height: 44vh;
 
@@ -667,8 +667,20 @@ header {
 
 @media screen and (min-width:768px) and (max-width:1022px) {
     header {
+        padding: 15px 10px;
         nav {
-            display: none;
+            ul{
+                text-align: right;
+                display: inline-block;
+                position: relative;
+                left: 65%;
+                bottom: 20px;
+                li{
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
 
@@ -762,6 +774,16 @@ header {
     
     .services {
         margin-top: 28rem;
+
+        .servCtn{
+            margin: 30px 15px 20px 12px;
+
+            .imageSlider{
+                .display-left{
+                    left: 7%;
+                }
+            }
+        }
     }
 
     .contact{

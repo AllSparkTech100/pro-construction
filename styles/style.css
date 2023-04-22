@@ -68,7 +68,6 @@ body {
 }
 
 footer {
-  z-index: 9999;
   background: #3a0202;
   text-align: center;
   height: 3rem;
@@ -95,7 +94,7 @@ footer p li {
   list-style: none;
 }
 
-footer p li .fa-brands {
+footer p li a {
   color: white;
 }
 
@@ -495,9 +494,6 @@ header nav ul li a {
 }
 
 @media screen and (max-width: 480px) and (orientation: landscape) {
-  header nav {
-    display: none;
-  }
   .intro {
     height: 50vh;
   }
@@ -597,12 +593,18 @@ header nav ul li a {
 }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
-  header nav {
-    display: none;
+  header {
+    padding: 15px 10px;
   }
   header nav ul {
+    text-align: right;
     display: inline-block;
-    text-align: center;
+    position: relative;
+    left: 65%;
+    bottom: 20px;
+  }
+  header nav ul li a {
+    font-size: 13px;
   }
   .intro {
     height: 44vh;
@@ -724,8 +726,18 @@ header nav ul li a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1022px) {
-  header nav {
-    display: none;
+  header {
+    padding: 15px 10px;
+  }
+  header nav ul {
+    text-align: right;
+    display: inline-block;
+    position: relative;
+    left: 65%;
+    bottom: 20px;
+  }
+  header nav ul li a {
+    font-size: 14px;
   }
   .intro .inner h4 {
     font-size: 14px;
@@ -794,6 +806,12 @@ header nav ul li a {
   }
   .services {
     margin-top: 28rem;
+  }
+  .services .servCtn {
+    margin: 30px 15px 20px 12px;
+  }
+  .services .servCtn .imageSlider .display-left {
+    left: 7%;
   }
   .contact .content h3 {
     font-size: 14px;
