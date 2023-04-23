@@ -68,34 +68,8 @@ body {
 }
 
 footer {
-  background: #3a0202;
-  text-align: center;
   height: 3rem;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-footer p {
-  color: white;
-  font-family: "Poppins";
-  font-weight: normal;
-  font-size: 16px;
-}
-
-footer p li {
-  list-style: none;
-}
-
-footer p li a {
-  color: white;
+  background: #000;
 }
 
 .btn {
@@ -127,6 +101,7 @@ footer p li a {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-track-color: blue;
 }
 
 header {
@@ -146,6 +121,32 @@ header {
   height: 3rem;
   width: 100%;
   background-color: white;
+}
+
+header .links {
+  width: 20%;
+  background: #5803037e;
+  height: 30px;
+}
+
+header .links ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .links ul li {
+  list-style: none;
 }
 
 header .logo {
@@ -828,11 +829,18 @@ header nav ul li a {
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1280px) {
-  header .logo h1 {
-    font-size: 18px;
+  header {
+    padding: 15px 10px;
+  }
+  header nav ul {
+    text-align: right;
+    display: inline-block;
+    position: relative;
+    left: 65px;
+    bottom: 20px;
   }
   header nav ul li a {
-    font-size: 18px;
+    font-size: 12px;
   }
   .second .second-carrier .parag {
     font-size: 14px;
