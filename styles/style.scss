@@ -1,907 +1,112 @@
-@import "./_variables";
-@import "./_helper";
-html{
-    scroll-behavior: smooth;
-    scrollbar-track-color: blue;
+*, ::before,::after{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
-header {
-    position: fixed;
+@import './variable';
+
+
+
+@media screen and (max-width:320px) {
+header{
+    padding: 9px 10px;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(197, 196, 197);
+    position: sticky;
     top: 0;
     z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: 3rem;
-    width: 100%;
-    background-color: $primary;
 
-    .links{
-        width: 20%;
-        background: #5803037e;
-        height: 30px;
+    .logo{
+        text-decoration: 3px solid underline;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    nav{
+        width: 90%;
+        height: 75%;
         ul{
-            width: 100%;
-            height: 100%;
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          li{
-            list-style: none;
-          }
-        }
-    }
-    .logo {
-        animation: zoom-in-zoom-out 3s infinite ease-in;
-
-        h1 {
-            font-family: 'Poppins';
-            font-weight: bold;
-            font-size: 12px;
-        }
-    }
-
-    nav {
-        width: 40%;
-        height: 2rem;
-
-        ul {
-            margin: 7px 9px;
-            width: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
-    
-            li {
+            margin-top: 4px;
+            line-height:1;
+            li{
                 list-style: none;
+                margin: 0 3px;
+                a{
+                    font-size: 12px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
 
-                a {
-                    font-family: 'Poppins';
+.intro{
+   height: 35vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(46, 24, 3, 0.418), rgba(54, 17, 6, 0.493)),url(../images/crane.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+    background-position: right;
+
+    .inner{
+        position: relative;
+        width: 100vw;
+        height: 15vh;
+        top: 35%;
+        display: flex;
+        font-family: 'Poppins';
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h4{
+            font-size: 14px;
+        }
+
+        h2{
+            font-size: 16px;
+        }
+
+        .btn{
+            border-radius: 4px;
+            padding: 3px 8px;
+            background-color: $Btn;
+            border: none;
+            a{
+                font-size: 12px;
+                color: $whi;
+                
+            }
+        }
+    }
+}
+    .second{
+        margin-top: 10px;
+        height: 95vh;
+        width: 100%;
+        background: #000;
+        .second-carrier{
+            height: 50px;
+            color: $whi;
+            .words{
+                h4{
                     font-size: 14px;
+                }
+                h2{
+                    font-size: 12px;
                     text-transform: uppercase;
                 }
             }
-        }
-    }
-}
-
-@keyframes zoom-in-zoom-out {
-    0% {
-        transform: scale(1, 1);
-    }
-
-    50% {
-        transform: scale(1.2, 1.2);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-.intro {
-    background-image: linear-gradient(rgba(34, 14, 1, 0.555), rgba(17, 19, 17, 0.644)), url(../images/crane.jpg);
-    width: 100%;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
-
-
-    .inner {
-        position: relative;
-        top: 40%;
-        left: 25%;
-        text-align: center;
-        height: 4rem;
-        width: 50%;
-
-        h2,
-        h4 {
-            text-transform: uppercase;
-            font-family: 'Poppins';
-            letter-spacing: 3;
-            margin: 3px;
-            font-weight: normal;
-            color: $primary;
-        }
-
-        h2 {
-
-            font-size: 24px;
-        }
-
-        h4 {
-            font-size: 18px;
-        }
-    }
-}
-
-.second {
-    width: 100%;
-    height: 70vh;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-top: 8rem;
-
-    .second-carrier {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 20px;
-        text-align: left;
-
-        h4,
-        h2 {
-            font-family: 'Poppins';
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        h4 {
-            color: $btn;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        .parag {
-            text-align: justify;
-            font-size: 18px;
-            height: 78%;
-            margin-top: 20px;
-            width: 80%;
-            font-family: 'Poppins';
-
-
-            .first {
-                width: 98%;
-                margin-top: 20px;
-                padding: 3px;
-            }
-        }
-
-    }
-
-    img {
-        border-radius: 40px;
-        height: 75vh;
-        width: 50%;
-        margin-right: 50px;
-    }
-}
-
-.services {
-    width: 100%;
-    height: 85vh;
-    margin-top: 20rem;
-    text-align: center;
-    font-family: 'Poppins';
-
-    h2 {
-        font-size: 18px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .servCtn {
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 60%;
-        width: 90%;
-        margin: 60px 60px;
-    }
-}
-
-.contact {
-    height: 50vh;
-    width: 100%;
-    margin-top: 9rem;
-    background-image: linear-gradient(hsla(20, 23%, 23%, 0.644), hsla(24, 100%, 1%, 0.863)), url(../images/room.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-
-    .content {
-        position: relative;
-        top: 35%;
-        font-family: 'Poppins';
-        color: $primary;
-
-        h3 {
-            font-size: 18px;
-            font-weight: normal;
-        }
-
-        p {
-            font-size: 16px;
-            margin-top: 20px;
-            a{
-                font-size: 12px;
-                text-decoration: none;
-            }
-        }
-    }
-
-}
-
-@media screen and (max-width:480px) and (orientation:portrait) {
-    header {
-        padding: 15px 10px;
-        nav {
-            ul{
-                text-align: right;
-                display: inline-block;
-                position: relative;
-                left: 65px;
-                bottom: 20px;
-                li{
-                    a{
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
-
-    .intro {
-        padding-top: 40px;
-        height: 45vh;
-
-        .inner {
-            height: 20px;
-            padding: 0;
-            border: 0;
-            width: 80%;
-            left: 10%;
-
-            h2 {
-                font-size: 14px;
-            }
-
-            h4 {
-                font-size: 13px;
-            }
-        }
-    }
-
-    .second {
-        padding: 0;
-        margin-top: 40px;
-        text-align: center;
-
-        img {
-            display: none;
-        }
-
-        .second-carrier {
-            text-align: center;
-
-            h4 {
-                font-size: 12px;
-            }
-
-            h2 {
-                font-size: 15px;
-            }
-
-            .parag {
-                width: 100%;
-                text-align: justify;
-
-                .first {
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
-    .services {
-        margin-top: 15rem;
-        height: 110vh;
-
-        h2 {
-            text-decoration: underline 2px solid $secondary;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-
-        p {
-            margin-top: -12px;
-            font-size: 14px;
-            padding: 12px;
-        }
-
-        .servCtn {
-            margin: 10px 0 0 26px;
-
-            .imageSlider {
-                margin: 0;
-                width: 100%;
-                height: 100%;
-
-                .display-right {
-                    left: 82%;
-                    background-color: $evil;
-                    color: $primary;
-                }
-
-                .display-left {
-                    left: 10%;
-                    background-color: $evil;
-                    color: $primary
-                }
-
-                .slides {
-                    .center-text {
-                        font-size: 12px;
-                        padding: 7px;
-                        bottom: 65px;
-                        font-weight: normal;
-                    }
-                }
-            }
-        }
-
-        .servBtn {
-            margin-top: 2%;
-            font-size: 10px;
-        }
-    }
-
-    .contact {
-        margin-top: 10%;
-
-        .content {
-            text-align: center;
-
-            h3 {
-                font-size: 14px;
-            }
-
-            p {
-                font-size: 13px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:480px) and (orientation:landscape) {
-
-    .intro {
-        height: 50vh;
-
-        .inner {
-            height: 20px;
-            padding: 0;
-            border: 0;
-            width: 80%;
-            left: 10%;
-
-            h2 {
-                font-size: 14px;
-            }
-
-            h4 {
-                font-size: 13px;
-            }
-        }
-    }
-
-    .second {
-        padding: 0;
-        margin-top: 40px;
-        text-align: center;
-
-        img {
-            display: none;
-        }
-
-        .second-carrier {
-            text-align: center;
-
-            h4 {
-                font-size: 12px;
-            }
-
-            h2 {
-                font-size: 15px;
-            }
-
-            .parag {
-                width: 100%;
-                text-align: justify;
-
-                .first {
-                    margin: 0;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
-    .services {
-        margin-top: 17rem;
-        height: 110vh;
-
-        h2 {
-            text-decoration: underline 2px solid $secondary;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-
-        p {
-            margin-top: -12px;
-            font-size: 14px;
-            padding: 12px;
-        }
-
-        .servCtn {
-            margin: 10px 0 0 22px;
-
-            .imageSlider {
-                margin: 0;
-                width: 100%;
-                height: 100%;
-
-                .display-right {
-                    left: 82%;
-                    background-color: $evil;
-                    color: $primary;
-                }
-
-                .display-left {
-                    left: 10%;
-                    background-color: $evil;
-                    color: $primary
-                }
-
-                .slides {
-                    .center-text {
-                        font-size: 12px;
-                        padding: 7px;
-                        bottom: 65px;
-                        font-weight: normal;
-                    }
-                }
-            }
-        }
-
-        .servBtn {
-            margin-top: 2%;
-            font-size: 10px;
-        }
-    }
-
-    .contact {
-        margin-top: 10%;
-
-        .content {
-            text-align: center;
-
-            h3 {
-                font-size: 14px;
-            }
-
-            p {
-                font-size: 13px;
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width:481px) and (max-width:767px) {
-    header {
-        padding: 15px 10px;
-        nav {
-            ul{
-                text-align: right;
-                display: inline-block;
-                position: relative;
-                left: 65%;
-                bottom: 20px;
-                li{
-                    a{
-                        font-size: 13px;
-                    }
-                }
-            }
-        }
-    }
-    .intro {
-        height: 44vh;
-
-        .inner {
-            height: 20px;
-            padding: 0;
-            width: 80%;
-            left: 10%;
-
-            h2 {
-                font-size: 14px;
-            }
-        }
-    }
-
-    .second {
-        .second-carrier {
-            text-align: center;
-
-            h2 {
-                font-size: 16px;
-            }
-
-            .parag {
-                width: 100%;
-                text-align: justify;
-                font-size: 14px;
-            }
-
-            img {
+            img{
                 display: none;
             }
         }
     }
-
-    .services {
-        margin-top: 24rem;
-
-        h2 {
-            font-size: 17px;
-        }
-
-        p {
-            font-size: 13px;
-        }
-
-        height:140vh;
-
-        .servCtn {
-            margin: 60px 0 0 5%;
-
-            .imageSlider {
-                margin: 0;
-                width: 100%;
-                height: 100%;
-
-                .display-right {
-                    left: 85%;
-                }
-
-                .display-left {
-                    left: 10%;
-                }
-
-                .slides {
-                    .center-text {
-                        font-size: 14px;
-                        padding: 7px;
-                        bottom: 65px;
-                        font-weight: normal;
-                    }
-                }
-            }
-        }
-
-        .servBtn {
-            position: relative;
-            top: 5%;
-        }
-    }
-
-    .contact {
-        margin-top: 6rem;
-
-        .content {
-            h3 {
-                font-size: 16px;
-            }
-
-            p {
-                font-size: 14px;
-                text-align: justify center;
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width:320px) {
-    header {
-        padding: 15px 10px;
-        nav {
-            ul{
-                text-align: right;
-                display: inline-block;
-                position: relative;
-                left: 35px;
-                bottom: 20px;
-                li{
-                    a{
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
-
-    .intro {
-        .inner {
-            h4 {
-                font-size: 13px;
-            }
-
-            h2 {
-                font-size: 14px;
-            }
-        }
-    }
-
-    .services {
-        margin-top: 20rem;
-
-        .servCtn {
-            margin: 15px 0 0 15px;
-
-            .imageSlider {
-                margin: 0;
-
-                .display-right {
-                    left: 80%;
-                }
-
-                .slides {
-                    height: 70%;
-                }
-            }
-        }
-
-        .servBtn{
-            position: relative;
-            left: 10px;
-        }
-    }
-
-    .contact {
-        margin-top: 4rem;
-        .content{
-            top: 20%;
-        }
-    }
-}
-
-
-@media screen and (min-width:768px) and (max-width:1022px) {
-    header {
-        padding: 15px 10px;
-        nav {
-            ul{
-                text-align: right;
-                display: inline-block;
-                position: relative;
-                left: 65%;
-                bottom: 20px;
-                li{
-                    a{
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
-
-    .intro{
-        .inner{
-            h4{
-                font-size: 14px;
-            }
-            h2{
-                font-size: 16px;
-            }
-        }
-    }
-    .second {
-        .second-carrier {
-            justify-content: space-between;
-            text-align: justify;
-
-            h2{
-                font-size: 14px;
-            }
-            .parag{
-                font-size: 12px;
-                text-align: justify;
-            }
-
-            img{
-                margin-right:30px;
-                margin-top: 13%;
-            }
-        }
-    }
-
     .services{
-        margin-top:30rem;
-
-        .servCtn{
-            background: #000;
-            margin: 60px 20px 20px 5%;
-            height: 85vh;
-            
-          .imageSlider{
-            margin: 0;
-
-            .slides{
-                .center-text{
-                    bottom:70px ;
-                }
-            }
-
-            .display-right{
-                left: 87%;
-            }
-
-            .display-left{
-                left: 10%;
-            }
-          }
-        }
-    }
-
-    .contact{
-        margin-top: 20rem;
-    }
-}
-
-@media screen and (max-width:247px) {
-    header {
-        padding: 15px 10px;
-
-        .logo{
-            h1{
-                font-size: 12px;
-            }
-        }
-        nav {
-            ul{
-                text-align: right;
-                display: inline-block;
-                position: relative;
-                left: 15px;
-                bottom: 20px;
-                li{
-                    a{
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
-    
-    .services {
-        margin-top: 28rem;
-
-        .servCtn{
-            margin: 30px 15px 20px 12px;
-
-            .imageSlider{
-                .display-left{
-                    left: 7%;
-                }
-            }
-        }
-    }
-
-    .contact{
-        .content{
-            h3{
-                font-size: 14px;
-            }
-
-            p{
-                font-size: 10px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:354px) {
-
-    .services{
-        margin-top: 20rem;
-    }
-    
-}
-
-@media screen and (min-width:1023px) and (max-width:1280px) {
-
-    header {
-        padding: 15px 10px;
-        nav {
-            ul{
-                text-align: right;
-                display: inline-block;
-                position: relative;
-                left: 65px;
-                bottom: 20px;
-                li{
-                    a{
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
-
-    .second{
-        .second-carrier{
-            .parag{
-                font-size:14px;
-            }
-
-            img{
-                margin-top: 3rem;
-        }
-    }
-}
-
-.services{
-    .servCtn{
-        width: 100%;
-        height: 90%;
-        position: relative;
-        top: 40px;
-        margin: 0;
-
-        .imageSlider{
-            height: 100%;
-            margin: 0;
-            width: 80%;
-
-            .display-left{
-                left: 15%;
-            }
-
-            .display-right{
-                left: 82%;
-            }
-
-            .slides{
-                .center-text{
-                    bottom: 60px;
-                }
-            }
-        }
-    }
-}
-
-.contact{
-    margin-top: 20rem;
-
-    .content{
-        p{
-            .btn{
-                position: relative;
-                top: 40px;
-                padding: 10px 20px;
-            }
-            a{
-                font-weight: normal;
-                font-size: 18px;
-            }
-        }
-    }
+        display: none;
 }
 }
-
