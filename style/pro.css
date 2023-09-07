@@ -1,0 +1,13 @@
+.inn {
+  width: 50px;
+  height: 9px;
+  border-radius: 12px;
+  background-color: snow;
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Poppins";
+}/*# sourceMappingURL=pro.css.map */
