@@ -10,4 +10,10 @@
      -moz-user-select: none;
           user-select: none;
   font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: inherit;
 }/*# sourceMappingURL=pro.css.map */
